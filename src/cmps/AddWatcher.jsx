@@ -4,9 +4,9 @@ export function AddWatcher() {
     const [inputs, setInputs] = useState({});
   
     const handleChange = (event) => {
-      const name = event.target.name;
+      const fullname = event.target.name;
       const value = event.target.value;
-      setInputs(values => ({...values, [name]: value}))
+      setInputs(values => ({...values, [fullname]: value}))
     }
   
     const handleSubmit = (event) => {
@@ -20,15 +20,15 @@ export function AddWatcher() {
         <input 
           type="text" 
           name="username" 
-          value={inputs.username || ""} 
+          value={inputs.username} 
           onChange={handleChange}
         />
         </label>
-        <label>Enter your age:
+        <label>Enter your movies
           <input 
             type="text" 
-            name="age" 
-            value={inputs.age || ""} 
+            name="movies" 
+            value={inputs.movies} 
             onChange={handleChange}
           />
           </label>
