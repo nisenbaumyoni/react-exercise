@@ -1,0 +1,46 @@
+/* .watcher-app { */
+  /* background-color: brown; */
+  /* text-align: center; */
+  /* width: 70vw; */
+  /* margin : auto; */
+  /* padding: 15px; */
+/* } */
+
+/* .watcher-section{ */
+  /* background-color: aquamarine; */
+  /* flex-grow: 30; */
+  /* margin: 15px; */
+  /* padding: 10px; */
+/* } */
+
+/* .watcher-list{ */
+  /* display: flex; */
+/* } */
+
+/* .Addwatcher-form{ */
+  /* background-color: aquamarine; */
+  /* flex-grow: 30; */
+  /* margin: 15px; */
+  /* padding: 10px; */
+/* } */
+
+/* /~ / ~/ */
+
+.app-header{
+  background-color:rgb(153, 159, 218);
+  color: black;
+}
+
+.app-nav-a{
+  color:black;
+  font-size: larger;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.app-nav-a:hover {
+  color: palevioletred;
+}
+
+.app-main{
+}

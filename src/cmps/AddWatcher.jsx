@@ -1,26 +1,28 @@
 import { useState } from "react";
 
-export function AddWatcher() {
-    const [inputs, setInputs] = useState({});
+// eslint-disable-next-line react/prop-types
+export function AddWatcher({onAddWatcher}) {
+    const [inputs, setInputs] = useState({fullname : "", movies : ""});
   
     const handleChange = (event) => {
-      const fullname = event.target.name;
+      const field = event.target.name;
       const value = event.target.value;
-      setInputs(values => ({...values, [fullname]: value}))
+      setInputs(prev => ({...prev, [field]: value}))
     }
   
     const handleSubmit = (event) => {
       event.preventDefault();
-      alert(inputs);
+      console.log("inputs",inputs)
+      onAddWatcher(inputs.fullname, inputs.movies)
     }
   
     return (
-      <form onSubmit={handleSubmit}>
+      <form className='Addwatcher-form' onSubmit={handleSubmit}>
         <label>Enter your name:
         <input 
           type="text" 
-          name="username" 
-          value={inputs.username} 
+          name="fullname" 
+          value={inputs.fullname} 
           onChange={handleChange}
         />
         </label>

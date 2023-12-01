@@ -1,4 +1,5 @@
-import { useEffect, useState,useRef } from "react";
+import '../css/CountDown.css'
+import { useEffect, useState,useRef } from 'react';
 
 // eslint-disable-next-line react/prop-types
 export function CountDown({startFrom, onDone}) {

@@ -1,29 +1,38 @@
-// import { useState } from 'react'
-// import React from "react";
-import {AnimalsIndex} from './pages/AnimalsIndex'
-import './App.css'
-import { CountDown } from './cmps/CountDown'
-import { SeasonIndex } from './pages/SeasonIndex'
-// eslint-disable-next-line no-unused-vars
-import { SimpleTimer } from './pages/SimpleTimer'
-import { Watcher } from './pages/Watcher'
-import { AddWatcher } from './cmps/AddWatcher'
-// import { Test } from './pages/Test'
-
+import './css/App.css';
+import { AnimalsIndex } from './pages/AnimalsIndex';
+import { CountDown } from './cmps/CountDown';
+import { SeasonIndex } from './pages/SeasonIndex';
+import { Watcher } from './pages/Watcher';
+import { useState } from 'react';
 
 function App() {
+  const [page, setPage] = useState('animals');
+
+  function onSetPage(ev, selectedPage) {
+    ev.preventDefault();
+    setPage(selectedPage);
+  }
 
   return (
     <>
-    <AnimalsIndex/>
-    <SeasonIndex/>
-    {/* <Test startFrom={10}/> */}
-    <CountDown startFrom={10} onDone={() => {console.log('Done!')} }/>
-    {/* <SimpleTimer/> */}
-    <AddWatcher/>
-    <Watcher/>
+      <header className='app-header'>
+        <nav>
+          <a className='app-nav-a' onClick={(ev) => {onSetPage(ev, 'animals')}}>Animals</a>
+          <a className='app-nav-a' onClick={(ev) => {onSetPage(ev, 'seasons')}}>Sessions</a>
+          <a className='app-nav-a' onClick={(ev) => {onSetPage(ev, 'Watcher')}}>Watcher</a>
+          <a className='app-nav-a' onClick={(ev) => {onSetPage(ev, 'CountDown')}}>Timer</a>
+          <a className='app-nav-a' onClick={(ev) => {onSetPage(ev, 'Mouse')}}>Mouse</a>
+        </nav>
+      </header>
+      <main className='app-main'>
+        {(page === 'animals') && <AnimalsIndex />}
+        {(page === 'seasons') && <SeasonIndex/>}
+        {(page === 'Watcher') && <Watcher/>}
+        {(page === 'CountDown') && <CountDown startFrom={10} onDone={() => {console.log('Done!')} }/>}
+        {(page === 'Mouse') && <p>WIP</p>}
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

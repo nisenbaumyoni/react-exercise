@@ -1,0 +1,25 @@
+.watcher-app {
+  background-color: brown;
+  text-align: center;
+  width: 70vw;
+  margin : 40px;
+  padding: 15px;
+}
+
+.watcher-section{
+  background-color: aquamarine;
+  flex-grow: 30;
+  margin: 15px;
+  padding: 10px;
+}
+
+.watcher-list{
+  display: flex;
+}
+
+.Addwatcher-form{
+  background-color: aquamarine;
+  flex-grow: 30;
+  margin: 15px;
+  padding: 10px;
+}

@@ -1,0 +1,7 @@
+.default-countdown {
+    background-color: rgba(203, 203, 226, 0.801);
+  }
+  
+  .last-seconds-countdown {
+    color: red;
+  }
