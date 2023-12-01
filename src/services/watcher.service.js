@@ -41,8 +41,18 @@ function save(watcher) {
 }
 
 function getEmptyWatcher(fullname = '', movies = {}) {
-    const id=''
-    return { id, fullname, movies }
+    let img = ''
+    const randomImgNum = Math.floor(Math.random() * 4)
+    switch(randomImgNum) {
+        case 0: img='./src/assets/watcher-blue.png'; break;
+        case 1: img='./src/assets/watcher-red.png'; break;
+        case 2: img='./src/assets/watcher-green.png'; break;
+        case 3: img='./src/assets/watcher-purple.png'; break;
+        default: img = './src/assets/watcher-green.png'
+    }
+
+    const id = ''
+    return { id, fullname, movies, img }
 }
 
 function getFilterBy() {
@@ -63,6 +73,7 @@ async function getNextWatcherId(watcherId) {
 }
 
 function _createWatchers() {
+    console.log('inside _createWatchers PLURAL')
     let watchers = utilService.loadFromStorage(watcher_KEY)
     if (!watchers || !watchers.length) {
         watchers = []

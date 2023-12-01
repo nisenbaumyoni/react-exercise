@@ -12,7 +12,6 @@ export function AddWatcher({onAddWatcher}) {
   
     const handleSubmit = (event) => {
       event.preventDefault();
-      console.log("inputs",inputs)
       onAddWatcher(inputs.fullname, inputs.movies)
     }
   

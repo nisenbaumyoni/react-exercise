@@ -6,7 +6,8 @@ export function CountDown({startFrom, onDone}) {
 
   const [time, setTime] = useState(startFrom)
   const intervalIdRef = useRef()
-  let classNameParameter='default-countdown'
+  const  classNameParameter= (time>6) ? 'default-countdown' : 'last-seconds-countdown'
+
 
   useEffect(() => {
     intervalIdRef.current = setInterval(() => {
@@ -19,11 +20,6 @@ export function CountDown({startFrom, onDone}) {
         onDone()
     }
   }, 1000)
-
-  if(time<6){
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    classNameParameter = 'last-seconds-countdown'
-  } 
 
   return () => {
     clearInterval(intervalIdRef.current)

@@ -1,11 +1,9 @@
 /* eslint-disable react/prop-types */
-// import {AnimalPreview} from './AnimalPreview'
 
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const seasons = ["Spring", "Summer", "Autumn","Winter"];
 const seasonImages = ["spring.png", "summer.png", "autumn.png","winter.png"];
-
 
 export function SeasonPreview({ isDark }) {
 

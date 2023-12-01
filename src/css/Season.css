@@ -1,7 +1,23 @@
 .season-preview-dark {
-    background-color: blue;
-  }
+  margin-top: 10px;
+  background-color: blue;
+  text-align: center;
+  width: 150px;
+  color: aliceblue;
+  font-size: larger;
+  border-color: black;
+  border-width: 10px;
+  border-style: groove;
+}
+
+.season-preview-light {
+  margin-top: 10px;
+  background-color: cyan;
+  text-align: center;
+  width: 150px;
+  font-size: larger;
+  border-color: black;
+  border-width: 10px;
+  border-style: groove;
+}
   
-  .season-preview-light {
-    background-color: cyan;
-  }

@@ -1,17 +1,8 @@
-.animal-preview-td {
-    text-align: center;
-    background-color: brown;
-    border-color: #ffffff;
-  }
-  
-  .animal-preview-th {
-    text-align: center;
-    background-color: brown;
-    border-color: #ffffff;
-  }
-  
-  .animal-preview-tr {
-    text-align: center;
-    background-color: brown;
-    border-color: #ffffff;
-  }
+.animal-preview-th,.animal-preview-tr,.animal-preview-td {
+  text-align: center;
+  padding: 20px;
+  background-color: brown;
+  border-color: black;
+  border-width: 5px;
+  font-size: larger;
+}

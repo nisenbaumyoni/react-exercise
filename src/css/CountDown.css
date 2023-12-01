@@ -1,7 +1,24 @@
 .default-countdown {
-    background-color: rgba(203, 203, 226, 0.801);
-  }
-  
-  .last-seconds-countdown {
-    color: red;
-  }
+  border-color: black;
+  border-width: 2px;
+  border-style: double;
+  width: 200px;
+  text-align: center;
+  font-size: larger;
+  border-color: black;
+  border-width: 10px;
+  border-style: double;
+}
+
+.last-seconds-countdown {
+  color: red;
+  border-color: black;
+  border-width: 2px;
+  border-style: double;
+  width: 200px;
+  text-align: center;
+  font-size: larger;
+  border-color: black;
+  border-width: 10px;
+  border-style: double;
+}

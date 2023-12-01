@@ -18,7 +18,7 @@ export function Watcher() {
       const watchers = await watcherService.query();
       setWatchers(watchers)
     } catch (err) {
-      console.log('Had issues loading cars', err);
+      console.log('Had issues loading watchers', err);
     }
   }
 
@@ -60,14 +60,17 @@ export function Watcher() {
         {watchers.map((watcher) => (
           <section className='watcher-section' key={watcher.id}>
             <h3 className='watcher'>{watcher.fullname}</h3>
-            <ul className='Movies'>
+            <img className='watcher-img' src={watcher.img} />
+            {/* <ul className='Movies'>
               {watcher.movies.map((movie) => (
                 <li key={movie}>{movie}</li>
               ))}
-            </ul>
+            </ul> */}
+            <footer className='watcher-footer'>
             <button onClick={() => onRemoveWatcher(watcher.id)}>X</button>
             <button onClick={() => {setIsSelectModalOpen(true)}}>Select</button>
             {isSelectModalOpen && <SelectWatcher watcherMovies={watcher.movies} onSelectWatcher={onSelectWatcher}/>}
+            </footer>
           </section>
         ))}
       </ul>
