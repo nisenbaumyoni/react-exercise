@@ -17,7 +17,6 @@ export function CountDown({startFrom, onDone}) {
     
     if (time >0){
         setTime((prevTime) => prevTime - 1)
-        console.log(time)
     } else {
         clearInterval(intervalIdRef.current)
         onDone()
