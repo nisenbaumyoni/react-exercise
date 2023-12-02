@@ -6,7 +6,7 @@ export function CountDown({startFrom, onDone}) {
 
   const [time, setTime] = useState(startFrom)
   const intervalIdRef = useRef()
-  const  classNameParameter= (time>6) ? 'default-countdown' : 'last-seconds-countdown'
+  const classNameParameter= (time>6) ? 'default-countdown' : 'last-seconds-countdown'
   const seconds = time % 60
   const minutes = Math.floor((time % 3600) / 60)
   const hours = Math.floor(time / 3600)
@@ -30,7 +30,7 @@ export function CountDown({startFrom, onDone}) {
 
 })
   return (
-    <section >
+    <section className='countdown-section'>
       <p className={classNameParameter}>{clockStr}</p>
     </section>
   );

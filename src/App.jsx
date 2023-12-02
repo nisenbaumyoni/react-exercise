@@ -20,7 +20,7 @@ function App() {
           <a className='app-nav-a' onClick={(ev) => {onSetPage(ev, 'animals')}}>Animals</a>
           <a className='app-nav-a' onClick={(ev) => {onSetPage(ev, 'seasons')}}>Sessions</a>
           <a className='app-nav-a' onClick={(ev) => {onSetPage(ev, 'Watcher')}}>Watcher</a>
-          <a className='app-nav-a' onClick={(ev) => {onSetPage(ev, 'CountDown')}}>Timer</a>
+          <a className='app-nav-a' onClick={(ev) => {onSetPage(ev, 'CountDown')}}>Count down</a>
           <a className='app-nav-a' onClick={(ev) => {onSetPage(ev, 'Mouse')}}>Mouse</a>
         </nav>
       </header>
@@ -28,7 +28,14 @@ function App() {
         {(page === 'animals') && <AnimalsIndex />}
         {(page === 'seasons') && <SeasonIndex/>}
         {(page === 'Watcher') && <Watcher/>}
-        {(page === 'CountDown') && <CountDown startFrom={3665} onDone={() => {console.log('Done!')} }/>}
+        {(page === 'CountDown') && <CountDown startFrom={10} onDone={() => {
+          try
+          {new Audio('./src/assets/short-crowd-cheer-6713.mp3').play()
+          console.log('Done!')}
+          catch(err){
+            console.log(err)
+          }
+      } }/>}
         {(page === 'Mouse') && <p>WIP</p>}
       </main>
     </>

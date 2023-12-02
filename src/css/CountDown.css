@@ -1,4 +1,5 @@
-.default-countdown {
+.countdown-section {
+  background-color: rgb(99, 190, 218);
   border-color: black;
   border-width: 2px;
   border-style: double;
@@ -8,17 +9,13 @@
   border-color: black;
   border-width: 10px;
   border-style: double;
+  margin-top : 10px;
+}
+
+.default-countdown {
+  color: black;
 }
 
 .last-seconds-countdown {
   color: red;
-  border-color: black;
-  border-width: 2px;
-  border-style: double;
-  width: 200px;
-  text-align: center;
-  font-size: larger;
-  border-color: black;
-  border-width: 10px;
-  border-style: double;
 }

@@ -8,7 +8,7 @@ export function SeasonIndex() {
 
     return (
         <div onClick={()=> {setIsDark(!isDark)}}>
-            <SeasonPreview isDark={isDark} />
+            <SeasonPreview className='season-preview' isDark={isDark} />
         </div>
     )
   }

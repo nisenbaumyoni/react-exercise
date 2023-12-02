@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { useEffect,useRef } from "react";
 
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -7,19 +8,38 @@ const seasonImages = ["spring.png", "summer.png", "autumn.png","winter.png"];
 
 export function SeasonPreview({ isDark }) {
 
+    const intervalIdRef = useRef()
     const d = new Date();
+    let hours = d.getHours()
+    let minutes = d.getMinutes()
+    let seconds = d.getSeconds()
+    const clockStr = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    console.log('clockStr',clockStr);
+
+
     let day = days[d.getDay()];
     let month = months[d.getMonth()];
     let season = seasons[(Math.floor(d.getMonth()/4))]
     let seasonImage = seasonImages[(Math.floor(d.getMonth()/4))]
     let classNameParameter = isDark ? "season-preview-dark" : "season-preview-light"
 
+    useEffect(() => {
+        intervalIdRef.current = setInterval(() => {
+        }, 1000)
+    
+      return () => {
+        clearInterval(intervalIdRef.current)
+    }
+    
+    })
+
     return (
         <div className={`${classNameParameter}`}>
-            <p className='season-p-dark'>{`${month}`}</p>
-            <p className='season-p-dark'>{`${season}`}</p>
+            <p>{`${month}`}</p>
+            <p>{`${season}`}</p>
             <img src={`./src/assets/${seasonImage}`}/>
-            <p className='season-p-dark'>{`${day}`}</p>
+            <p>{`${day}`}</p>
+            <p>{`${clockStr}`}</p>
         </div>
     )
 }
