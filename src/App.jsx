@@ -28,7 +28,7 @@ function App() {
         {(page === 'animals') && <AnimalsIndex />}
         {(page === 'seasons') && <SeasonIndex/>}
         {(page === 'Watcher') && <Watcher/>}
-        {(page === 'CountDown') && <CountDown startFrom={10} onDone={() => {console.log('Done!')} }/>}
+        {(page === 'CountDown') && <CountDown startFrom={3665} onDone={() => {console.log('Done!')} }/>}
         {(page === 'Mouse') && <p>WIP</p>}
       </main>
     </>
