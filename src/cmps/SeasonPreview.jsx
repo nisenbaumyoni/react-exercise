@@ -10,8 +10,6 @@ export function SeasonPreview({ isDark }) {
 
     const intervalIdRef = useRef()
     const [d, setD] = useState(new Date())
-
-    // const d = new Date();
     let hours = d.getHours()
     let minutes = d.getMinutes()
     let seconds = d.getSeconds()
@@ -27,7 +25,8 @@ export function SeasonPreview({ isDark }) {
 
     useEffect(() => {
         intervalIdRef.current = setInterval(() => {
-        }, 1000)
+            setD(new Date())
+      }, 1000)
     
       return () => {
         clearInterval(intervalIdRef.current)
