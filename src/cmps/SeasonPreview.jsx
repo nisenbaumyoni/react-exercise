@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useEffect,useRef } from "react";
+import { useEffect,useRef,useState } from "react";
 
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -9,7 +9,9 @@ const seasonImages = ["spring.png", "summer.png", "autumn.png","winter.png"];
 export function SeasonPreview({ isDark }) {
 
     const intervalIdRef = useRef()
-    const d = new Date();
+    const [d, setD] = useState(new Date())
+
+    // const d = new Date();
     let hours = d.getHours()
     let minutes = d.getMinutes()
     let seconds = d.getSeconds()
