@@ -16,13 +16,13 @@ export function AddWatcher({ onAddWatcher, onCloseAddModal }) {
     onAddWatcher(watcherToAdd.fullname, watcherToAdd.movies);
   };
 
-  const handleClose = (event) => {
-    console.log("AddWatcher - handleclose");
-    console.log("AddWatcher - onCloseAddModal", onCloseAddModal);
-    event.preventDefault();
-    console.log(event)
-    onCloseAddModal();
-  };
+  // const handleClose = (event) => {
+  //   console.log("AddWatcher - handleclose");
+  //   console.log("AddWatcher - onCloseAddModal", onCloseAddModal);
+  //   event.preventDefault();
+  //   console.log(event)
+  //   onCloseAddModal();
+  // };
 
   return (
     <section className="addwatcher-section">

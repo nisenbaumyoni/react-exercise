@@ -1,7 +1,7 @@
 .watcher-app {
   background-color: brown;
   text-align: center;
-  width: fit-content;
+  width : 100%;
   margin : 40px;
   padding: 15px;
 }
@@ -15,13 +15,7 @@
 
 .watcher-list{
   display: flex;
-}
-
-.Addwatcher-form{
-  background-color: aquamarine;
-  flex-grow: 30;
-  margin: 15px;
-  padding: 10px;
+  flex-wrap: wrap;
 }
 
 .watcher-footer{
@@ -31,53 +25,12 @@
   position:absolute;
   width: 300px;
   height: 400px;
+  right: 0px;
+  top: 0px;
+  border-bottom: 0px;
   margin: inherit;
   padding: 10px;
-  background-color: purple;
+  background-color: rgb(199, 159, 199);
   border-color: black;
   border-style: groove;
-
-}
-
-/* Style for the button */
-.openModal {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-/* Modal container */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Positioning it relative to the viewport */
-  bottom: 20px; /* Adjust this value as needed to position it */
-  right: 20px; /* Adjust this value as needed to position it */
-  z-index: 9999; /* Ensure it appears above other content */
-}
-
-/* Modal content */
-.modal-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  position: relative;
-}
-
-/* Close button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
 }

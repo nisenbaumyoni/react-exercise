@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-// import '../css/Mouse.css'
+import '../css/Mouse.css'
 
 export function Mouse() {
 
@@ -7,8 +7,6 @@ const [isOn,setIsOn] = useState(false)
 const [pos,setPos] = useState({x: 0 , y: 0})
 
 useEffect (() =>{
-    // if(isOn) addListeners()
-    // else removeListeners()
 
     isOn ? addListeners() : removeListeners()
 
