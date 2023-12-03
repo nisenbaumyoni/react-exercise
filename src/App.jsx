@@ -4,6 +4,7 @@ import { CountDown } from './cmps/CountDown';
 import { SeasonIndex } from './pages/SeasonIndex';
 import { Watcher } from './pages/Watcher';
 import { useState } from 'react';
+import { Mouse } from './pages/Mouse';
 
 function App() {
   const [page, setPage] = useState('animals');
@@ -36,7 +37,7 @@ function App() {
             console.log(err)
           }
       } }/>}
-        {(page === 'Mouse') && <p>WIP</p>}
+        {(page === 'Mouse') && <Mouse/>}
       </main>
     </>
   );

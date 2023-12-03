@@ -1,3 +1,6 @@
+//how to create the modal ?
+//how to have the modal floating absolutely in the right bottom corner
+
 import '../css/Watcher.css'
 import { useEffect, useState } from 'react';
 import { watcherService } from '../services/watcher.service';
@@ -35,6 +38,11 @@ export function Watcher() {
 
     setIsSelectModalOpen(false)
   }
+
+  function onCloseAddModal(){
+    console.log("false")
+    setIsAddModalOpen(false)
+  }
   
   async function onRemoveWatcher(watcherId) {
     try {
@@ -53,7 +61,7 @@ export function Watcher() {
   return (
     <section className='watcher-app'>
       <button onClick={() => {setIsAddModalOpen(true)}}>add</button>
-      {isAddModalOpen && <AddWatcher onAddWatcher={onAddWatcher}/>}
+      {isAddModalOpen && <AddWatcher onAddWatcher={onAddWatcher} onCloseAddModal={onCloseAddModal}/>}
 
       <h2>List of watchers</h2>
       <ul className='watcher-list'>

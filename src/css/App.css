@@ -1,31 +1,3 @@
-/* .watcher-app { */
-  /* background-color: brown; */
-  /* text-align: center; */
-  /* width: 70vw; */
-  /* margin : auto; */
-  /* padding: 15px; */
-/* } */
-
-/* .watcher-section{ */
-  /* background-color: aquamarine; */
-  /* flex-grow: 30; */
-  /* margin: 15px; */
-  /* padding: 10px; */
-/* } */
-
-/* .watcher-list{ */
-  /* display: flex; */
-/* } */
-
-/* .Addwatcher-form{ */
-  /* background-color: aquamarine; */
-  /* flex-grow: 30; */
-  /* margin: 15px; */
-  /* padding: 10px; */
-/* } */
-
-/* /~ / ~/ */
-
 .app-header{
   background-color:rgb(153, 159, 218);
   color: black;
@@ -43,4 +15,11 @@
 }
 
 .app-main{
+  margin-top: 5px;
+  width: 100%;
+  height: 100%;
+  /* display: flex; */
+  /* place-items: center */
+  min-width: 320px;
+  min-height: 100vh;
 }
