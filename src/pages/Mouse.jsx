@@ -3,7 +3,7 @@ import '../css/Mouse.css'
 
 export function Mouse() {
 
-const [isOn,setIsOn] = useState(false)
+const [isOn,setIsOn] = useState(true)
 const [pos,setPos] = useState({x: 0 , y: 0})
 
 useEffect (() =>{
@@ -14,8 +14,6 @@ useEffect (() =>{
         if (isOn) removeListeners()
     }
 },[isOn])
-
-
 
 function updatePos(ev){
     console.log('ison', isOn);

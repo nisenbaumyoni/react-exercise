@@ -13,20 +13,12 @@ export function AddWatcher({ onAddWatcher, onCloseAddModal }) {
   const handleSubmit = (ev) => {
     ev.preventDefault();
     console.log(ev)
-    onAddWatcher(watcherToAdd.fullname, watcherToAdd.movies);
+    watcherToAdd.fullname && watcherToAdd.movies ? onAddWatcher(watcherToAdd.fullname, watcherToAdd.movies) : ''
   };
 
-  // const handleClose = (event) => {
-  //   console.log("AddWatcher - handleclose");
-  //   console.log("AddWatcher - onCloseAddModal", onCloseAddModal);
-  //   event.preventDefault();
-  //   console.log(event)
-  //   onCloseAddModal();
-  // };
-
   return (
-    <section className="addwatcher-section">
-      <p> Modal content goes here.</p>
+    <section className="modal-section">
+      <h3> Add Watcher</h3>
       <label>
         Enter your name:
         <input className='addmodal-inputs-name'

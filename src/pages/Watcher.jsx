@@ -34,16 +34,20 @@ export function Watcher() {
     setIsAddModalOpen(false)
   }
 
-  function onSelectWatcher(){
-
-    setIsSelectModalOpen(false)
-  }
-
   function onCloseAddModal(){
-    console.log("false")
+    console.log("onCloseAddModal")
     setIsAddModalOpen(false)
   }
   
+  function onSelectWatcher(){
+
+    setIsSelectModalOpen(true)
+  }
+
+  function onCloseSelectModal(){
+    console.log("onCloseSelectModal")
+    setIsSelectModalOpen(false)
+  }
   async function onRemoveWatcher(watcherId) {
     try {
       // eslint-disable-next-line no-unused-vars
@@ -60,16 +64,14 @@ export function Watcher() {
   
   return (
     <section className='watcher-app'>
-      <button onClick={() => {setIsAddModalOpen(true)}}>add</button>
+      <button className='watcherapp-addbutton' onClick={() => {setIsAddModalOpen(true)}}>Add Watcher</button>
       {isAddModalOpen && <AddWatcher onAddWatcher={onAddWatcher} onCloseAddModal={onCloseAddModal}/>}
-
-      <h2>List of watchers</h2>
       <ul className='watcher-list'>
         {watchers.map((watcher) => (
           <section className='watcher-section' key={watcher.id}>
             <h3 className='watcher'>{watcher.fullname}</h3>
             <img className='watcher-img' src={watcher.img} />
-            {/* <ul className='Movies'>
+            {/* <ul className='movies'>
               {watcher.movies.map((movie) => (
                 <li key={movie}>{movie}</li>
               ))}
@@ -77,7 +79,7 @@ export function Watcher() {
             <footer className='watcher-footer'>
             <button onClick={() => onRemoveWatcher(watcher.id)}>X</button>
             <button onClick={() => {setIsSelectModalOpen(true)}}>Select</button>
-            {isSelectModalOpen && <SelectWatcher watcherMovies={watcher.movies} onSelectWatcher={onSelectWatcher}/>}
+            {isSelectModalOpen && <SelectWatcher watcherMovies={watcher.movies} onSelectWatcher={onSelectWatcher} onCloseSelectModal={onCloseSelectModal}/>}
             </footer>
           </section>
         ))}
